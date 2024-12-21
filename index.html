@@ -1,127 +1,87 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>แบบฟอร์มสอบถาม</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5dc;
-            margin: 0;
-            padding: 20px;
-        }
-        table {
-            width: 70%;
-            margin: auto;
-            border-collapse: collapse;
-            background-color: #fff8dc;
-            border: 1px solid #dcdcdc;
-        }
-        th {
-            text-align: center;
-            padding: 15px;
-            font-size: 24px;
-            background-color: #f0e68c;
-        }
-        td {
-            padding: 10px;
-            vertical-align: top;
-        }
-        hr {
-            border: none;
-            border-top: 2px solid #dcdcdc;
-            margin: 10px 0;
-        }
-        input[type="text"], select {
-            width: 100%;
-            padding: 5px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        input[type="checkbox"], input[type="radio"] {
-            margin-right: 10px;
-        }
-        input[type="submit"] {
-            background-color: #4caf50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <title>แบบสอบถาม</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <th colspan="2">แบบฟอร์มสอบถาม</th>
-        </tr>
-        <tr>
-            <td colspan="2"><hr></td>
-        </tr>
-        <tr>
-            <td>ชื่อ-นามสกุล:</td>
-            <td><input type="text" name="name" placeholder="กรอกชื่อ-นามสกุล" required></td>
-        </tr>
-        <tr>
-            <td>รหัสนักศึกษา:</td>
-            <td><input type="text" name="student_id" placeholder="กรอกรหัสนักศึกษา" required></td>
-        </tr>
-        <tr>
-            <td>เพศ:</td>
-            <td>
-                <input type="radio" name="gender" value="male" checked> ชาย
-                <input type="radio" name="gender" value="female"> หญิง
-            </td>
-        </tr>
-        <tr>
-            <td>สังกัดคณะ:</td>
-            <td>
-                <select name="faculty" size="5">
-                    <option value="cs">วิทยาการคอมพิวเตอร์</option>
-                    <option value="engineering">วิศวกรรมศาสตร์</option>
-                    <option value="business">บริหารธุรกิจ</option>
-                    <option value="science">วิทยาศาสตร์</option>
-                    <option value="arts">ศิลปศาสตร์</option>
-                    <option value="medicine">แพทยศาสตร์</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>แม่สีที่ชื่นชอบ:</td>
-            <td>
-                <input type="checkbox" name="color" value="red"> สีแดง
-                <input type="checkbox" name="color" value="blue"> สีน้ำเงิน
-                <input type="checkbox" name="color" value="green"> สีเขียว
-            </td>
-        </tr>
-        <tr>
-            <td>ผลไม้ที่ชื่นชอบ:</td>
-            <td>
-                <input type="checkbox" name="fruit" value="orange"> ส้ม
-                <input type="checkbox" name="fruit" value="banana"> กล้วย
-                <input type="checkbox" name="fruit" value="apple"> แอปเปิ้ล
-            </td>
-        </tr>
-        <tr>
-            <td>อาหารที่ชื่นชอบ:</td>
-            <td>
-                <input type="checkbox" name="food" value="fried_chicken"> ไก่ทอด
-                <input type="checkbox" name="food" value="pad_thai"> ผัดไทย
-                <input type="checkbox" name="food" value="noodle"> ก๋วยเตี๋ยว
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" style="text-align: center;">
-                <input type="submit" value="บันทึก">
-            </td>
-        </tr>
-    </table>
+    <h1 style="text-align: center;">แบบสอบถาม</h1>
+    <form>
+        <table align="center" style="background-color: #f5deb3; padding: 20px;">
+            <tr>
+                <td colspan="2"><b>ข้อมูลผู้ตอบแบบสอบถาม</b></td>
+            </tr>
+            <tr>
+                <td><b>ชื่อ-นามสกุล</b></td>
+                <td><input type="text" name="fullname"></td>
+            </tr>
+            <tr>
+                <td><b>รหัสนักศึกษา</b></td>
+                <td><input type="text" name="student_id"></td>
+            </tr>
+            <tr>
+                <td><b>เพศ</b></td>
+                <td>
+                    <input type="radio" name="gender" value="ชาย" checked> ชาย
+                    <input type="radio" name="gender" value="หญิง"> หญิง
+                </td>
+            </tr>
+            <tr>
+                <td><b>สังกัดคณะ</b></td>
+                <td>
+                    <select name="faculty" size="5">
+                        <option value="วิทยาศาสตร์">วิทยาศาสตร์</option>
+                        <option value="วิทยาการคอมพิวเตอร์">วิทยาการคอมพิวเตอร์</option>
+                        <option value="ครุศาสตร์">ครุศาสตร์</option>
+                        <option value="บริหารธุรกิจและการจัดการ">บริหารธุรกิจและการจัดการ</option>
+                        <option value="มนุษยศาสตร์">มนุษยศาสตร์</option>
+                        <option value="เทคโนโลยีอุตสาหกรรม">เทคโนโลยีอุตสาหกรรม</option>
+                        <option value="เกษตรศาสตร์">เกษตรศาสตร์</option>
+                        <option value="พยาบาลศาสตร์">พยาบาลศาสตร์</option>
+                        <option value="สาธารณสุขศาสตร์">สาธารณสุขศาสตร์</option>
+                        <option value="แพทย์แผนไทยและแพทย์แผนตะวันออก">แพทย์แผนไทยและแพทย์แผนตะวันออก</option>
+                        <option value="นิเทศศาสตร์">นิเทศศาสตร์</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><b>แม่สีที่ชื่นชอบ</b></td>
+                <td>
+                    <input type="checkbox" name="color" value="สีแดง"> สีแดง
+                    <input type="checkbox" name="color" value="สีเขียว"> สีเขียว
+                    <input type="checkbox" name="color" value="สีน้ำเงิน"> สีน้ำเงิน
+                </td>
+            </tr>
+            <tr>
+                <td><b>ผลไม้ที่ชื่นชอบ</b></td>
+                <td>
+                    <input type="checkbox" name="fruit" value="มะม่วง"> มะม่วง
+                    <input type="checkbox" name="fruit" value="มะนาว"> มะนาว
+                    <input type="checkbox" name="fruit" value="น้อยหน่า"> น้อยหน่า
+                    <input type="checkbox" name="fruit" value="ทุเรียน"> ทุเรียน
+                    <input type="checkbox" name="fruit" value="ลำไย"> ลำไย
+                    <input type="checkbox" name="fruit" value="ฝรั่ง"> ฝรั่ง
+                    <input type="checkbox" name="fruit" value="แตงโม"> แตงโม
+                </td>
+            </tr>
+            <tr>
+                <td><b>อาหารที่ชื่นชอบ</b></td>
+                <td>
+                    <input type="checkbox" name="food" value="ต้มยำกุ้ง"> ต้มยำกุ้ง
+                    <input type="checkbox" name="food" value="ไข่เจียวหมูสับ"> ไข่เจียวหมูสับ
+                    <input type="checkbox" name="food" value="แกงเขียวหวานไก่"> แกงเขียวหวานไก่
+                    <input type="checkbox" name="food" value="ผัดไทย"> ผัดไทย
+                    <input type="checkbox" name="food" value="แกงข่าไก่"> แกงข่าไก่
+                    <input type="checkbox" name="food" value="ราดหน้าหมี่กรอบ"> ราดหน้าหมี่กรอบ
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" value="บันทึก">
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
 </html>
